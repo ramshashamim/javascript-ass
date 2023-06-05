@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    // TASK 01 //
+
+
+
+function returnEvensum (number) {
+    let sum = 0;
+    for (i = 0; i < number.length; i++) {
+        if (number[i] % 2 == 0) {
+            sum = sum + number[i];
+        }
+    }
+    console.log(sum);
+}
+let number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+returnEvensum(number);
+
+// TASK 02 //
+
+let Randnumber = Math.round(Math.random() * 100);
+
+for (i = 0; i <= 100; i++){
+
+if (i % 3 == 0 && i % 5 == 0){
+    console.log("FizzBuzz")
+}
+else if (i % 3 == 0){
+    console.log("Fizz")
+}
+else if (i % 5 == 0){
+    console.log("Buzz");
+}
+}
+
+// TASK 03 //
+
+let Cars = {
+    Make : "TOYOTA",
+    Model : "Supra",
+    Year : "2022"
+}
+
+function PrintObject(Cars){
+    for (i in Cars){
+        console.log(i + ":" + Cars[i])
+    }
+}
+PrintObject(Cars);
+
+// TASK 04 // 
+
+
+
+function sort(strings) {
+  let sortedStrings = strings.sort();
+  return sortedStrings;
+}
+
+
+
+let arrayOfStrings = ["ramsha", "ansar", "maham", "tafzeela"];
+let sortedArray = sort(arrayOfStrings);
+console.log(sortedArray);
+
+// TASK 05 //
+
+class Parents {
+    constructor (id, name, subject, classs, age){
+        this.id = id,
+        this.Name = name,
+        this.subject = subject,
+        this.classs = classs,
+        this.age = age
+    }
+    message(){
+        console.log("HELLO")
+    }
+
+    static anotherMsg(){
+        console.log("Welcome");
+    }
+}
+
+class Child extends Parents {
+    constructor (id, name, subject, classs, age){
+        super(id, name, subject, classs, age)
+    }
+}
+
+let parent = new Parents(7891, "RAMSHA SHAMIM", "WEB DEVELOPMENT", "12TH", 20);
+let child = new Child (4453, "MAHAM ASLAM", "WEB DESIGNING", "12TH", 20);
+child.sklls = "HTML"
+console.log(parent)
+console.log(child)
+
+
+</script>    
+</body>
+</html>
+
